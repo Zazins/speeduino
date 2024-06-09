@@ -76,6 +76,7 @@ void sendVAGCluster()
 }
 void receiveCANwbo() 
 {
+  if (configPage2.canBMWCluster == true) { sendBMWCluster(); }
   // Currently only RusEFI CAN Wideband supported: https://github.com/mck1117/wideband
   if(configPage2.canWBO == CAN_WBO_RUSEFI)
   {
